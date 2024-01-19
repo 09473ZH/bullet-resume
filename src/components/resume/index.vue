@@ -29,7 +29,7 @@ const projectList = data.projectList.map((project: any) => {
 
 const eduList = data.eduList.map((edu: any) => {
   const {university, degree, major, eduDate} = edu
-  const brief = [university, major,degree, eduDate]
+  const brief = [university, major, degree, eduDate]
   return {
     name: '',
     brief
@@ -41,41 +41,34 @@ const eduList = data.eduList.map((edu: any) => {
   <div flex flex-wrap px-10 py-5 mx-auto my-8 mb-32 border-1 border-rd-1 border-solid max-w-4xl>
     <!--    header-->
     <header block w-full>
-      <section flex-row text-3xl w-full pb-5>
+      <section text-4xl w-full pb-5>
         {{ name }}
       </section>
       <section max-w-full flex pb-5 justify-between>
-        <div text-center text-left>
-          <div>
-            <span>{{ age }}</span>
-            <span px-3>|</span>
-            <span>{{ gender }}</span>
-            <span px-3>|</span>
-            <span>{{ location }}</span>
-          </div>
-          <div>
-            {{ position }}
-          </div>
+        <div text-left>
+          <span>{{ age }}</span>
+          <span px-3>|</span>
+          <span>{{ gender }}</span>
+          <span px-3>|</span>
+          <span>{{ location }}</span>
+          <div>{{ position }}</div>
         </div>
-        <div flex-1 text-right>
-          <div inline-flex>
+        <div flex flex-col>
+          <div flex justify-end>
             <span>{{ tel }}</span>
-            <span i-carbon-phone text-2xl pl-2></span>
+            <span i-carbon-phone font-size-5.5 pl-2></span>
           </div>
-          <br>
-          <div inline-flex>
+          <div flex justify-end>
             <span>{{ wechat }}</span>
-            <span i-carbon-logo-wechat text-2xl pl-2></span>
+            <span i-carbon-logo-wechat font-size-5.5 pl-2></span>
           </div>
-          <br>
-          <div inline-flex>
+          <div inline-flex justify-end content-center>
             <span>{{ email }}</span>
-            <span i-carbon-email text-2xl pl-2></span>
+            <span i-carbon-email font-size-5.5 pl-2></span>
           </div>
-          <br>
-          <div inline-flex>
+          <div flex justify-end>
             <span>{{ github }}</span>
-            <a i-carbon-logo-github text-2xl pl-2 href="https://github.com/09473ZH" target="_blank"/>
+            <a i-carbon-logo-github font-size-5.5 pl-2 href="https://github.com/09473ZH" target="_blank"/>
           </div>
         </div>
       </section>
