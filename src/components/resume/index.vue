@@ -1,0 +1,95 @@
+<script setup lang="ts">
+import data from '../../config/data'
+import Item from "../../components/resume/Item.vue";
+
+const {info, contact} = data
+const {name, position, location, gender, age} = info
+const {tel, wechat, email, github} = contact
+const skillList = data.skillList.map((skill: any) => {
+  return {
+    desc: skill.skillDesc
+  }
+})
+const workList = data.workList.map((work: any) => {
+  const {company, apartment, position, workDate, workDesc} = work
+  const brief = [apartment, position, workDate]
+  return {
+    name: company,
+    brief,
+    desc: workDesc
+  }
+})
+const projectList = data.projectList.map((project: any) => {
+  return {
+    name: project.project,
+    brief: project.projectDesc,
+    desc: project.projectContent
+  }
+})
+
+const eduList = data.eduList.map((edu: any) => {
+  const {university, degree, major, eduDate} = edu
+  const brief = [university, major,degree, eduDate]
+  return {
+    name: '',
+    brief
+  }
+})
+</script>
+
+<template>
+  <div flex flex-wrap px-10 py-5 mx-auto my-8 mb-32 border-1 border-rd-1 border-solid max-w-4xl>
+    <!--    header-->
+    <header block w-full>
+      <section flex-row text-3xl w-full pb-5>
+        {{ name }}
+      </section>
+      <section max-w-full flex pb-5 justify-between>
+        <div text-center text-left>
+          <div>
+            <span>{{ age }}</span>
+            <span px-3>|</span>
+            <span>{{ gender }}</span>
+            <span px-3>|</span>
+            <span>{{ location }}</span>
+          </div>
+          <div>
+            {{ position }}
+          </div>
+        </div>
+        <div flex-1 text-right>
+          <div inline-flex>
+            <span>{{ tel }}</span>
+            <span i-carbon-phone text-2xl pl-2></span>
+          </div>
+          <br>
+          <div inline-flex>
+            <span>{{ wechat }}</span>
+            <span i-carbon-logo-wechat text-2xl pl-2></span>
+          </div>
+          <br>
+          <div inline-flex>
+            <span>{{ email }}</span>
+            <span i-carbon-email text-2xl pl-2></span>
+          </div>
+          <br>
+          <div inline-flex>
+            <span>{{ github }}</span>
+            <a i-carbon-logo-github text-2xl pl-2 href="https://github.com/09473ZH" target="_blank"/>
+          </div>
+        </div>
+      </section>
+    </header>
+    <!--    content-->
+    <section w-full text-left>
+      <Item :title=data.items.skill :item-info-list="skillList"/>
+      <Item :title=data.items.work :item-info-list="workList"/>
+      <Item :title=data.items.project :item-info-list="projectList"/>
+      <Item :title=data.items.edu :item-info-list="eduList"/>
+    </section>
+  </div>
+</template>
+
+<style scoped>
+
+</style>
