@@ -1,18 +1,50 @@
-# Vue 3 + TypeScript + Vite
+# Bullet Resume
+## 简介
+- 主要技术栈：Vue3 + Vite4 + TS + Unocss
+- 以 bullet dot 为内容主体的简历
+- [view demo](http://resume.corgi.plus/)
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## 开始
+安装依赖
+```bash
+$ pnpm install
+```
+开始构建
 
-## Recommended IDE Setup
+```bash
+$ pnpm dev
+```
+使用
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+修改 `src/config/data.json`
 
-## Type Support For `.vue` Imports in TS
+## 说明
+除了个人信息（header）部分，内容都是由`Item`组件渲染
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+``` typescript
+type Props = {
+title: string,
+itemInfoList: ItemInfoType[]
+}
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+type ItemInfoType = {
+name?: string,
+brief?: string[],
+desc?: string[],
+}
+```
+如上所示，每个`Item` 由四个部分组成：标题，名称，简介，描述。
+
+简介部分可以是 “词汇” 也可以是“句子”。建议词汇数量不超过四个。
+
+描述部分是一个无序列表。
+
+除标题是必须外，其他三个都是可选值。
+
+本仓库的`data.json`由`chatgpt`生成，不具备真实性。
+
+## TODO
+- [ ] 在线编辑
+- [ ] 中英切换
+- [ ] 性能优化
