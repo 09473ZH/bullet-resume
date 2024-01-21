@@ -1,8 +1,7 @@
-<script lang="ts" setup>
+<script setup lang="ts">
 import Resume from './components/resume/index.vue'
 </script>
 <template>
-  <div>
-    <Resume />
-  </div>
+  <Resume />
 </template>
+6

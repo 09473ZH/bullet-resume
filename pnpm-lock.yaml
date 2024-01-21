@@ -8,6 +8,9 @@ dependencies:
   '@vueuse/core':
     specifier: ^8.2.0
     version: 8.9.4(vue@3.4.14)
+  flowbite:
+    specifier: ^2.2.1
+    version: 2.2.1
   vue:
     specifier: ^3.3.11
     version: 3.4.14(typescript@5.3.3)
@@ -25,6 +28,9 @@ devDependencies:
   '@iconify-json/twemoji':
     specifier: ^1.1.15
     version: 1.1.15
+  '@julr/unocss-preset-flowbite':
+    specifier: ^0.0.2
+    version: 0.0.2(unocss@0.58.3)
   '@unocss/preset-icons':
     specifier: ^0.58.3
     version: 0.58.3
@@ -34,6 +40,9 @@ devDependencies:
   '@vitejs/plugin-vue':
     specifier: ^5.0.0
     version: 5.0.3(vite@5.0.11)(vue@3.4.14)
+  '@vonagam/unocss-preset-flowbite':
+    specifier: ^0.0.1
+    version: 0.0.1(@unocss/core@0.58.3)
   typescript:
     specifier: ^5.3.3
     version: 5.3.3
@@ -813,6 +822,15 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
+  /@julr/unocss-preset-flowbite@0.0.2(unocss@0.58.3):
+    resolution: {integrity: sha512-9U+RABXC9xIH9sCIOZ1a342jceWUhnxapH6o/4bXCGp7Ou8D4E/f5A5myJiPeuegjwTH+Z2GrTqoUF7A9xb2PA==}
+    peerDependencies:
+      unocss: '>= 0.31.13 < 1'
+    dependencies:
+      mini-svg-data-uri: 1.4.4
+      unocss: 0.58.3(postcss@8.4.33)(vite@5.0.11)
+    dev: true
+
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
     engines: {node: '>= 8'}
@@ -837,6 +855,10 @@ packages:
   /@polka/url@1.0.0-next.24:
     resolution: {integrity: sha512-2LuNTFBIO0m7kKIQvvPHN6UE63VjpmL9rnEEaOOaiSPbZK+zUOYIzBAWcED+3XYzhYsd/0mD57VdxAEqqV52CQ==}
     dev: true
+
+  /@popperjs/core@2.11.8:
+    resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
+    dev: false
 
   /@rollup/pluginutils@5.1.0:
     resolution: {integrity: sha512-XTIWOPPcpvyKI6L1NHo0lFlCyznUEyPmPY1mc3KpPVDYulHSTvyeLNVW00QTLIAFNhR3kYnJTQHeGqU4M3n09g==}
@@ -1412,6 +1434,15 @@ packages:
     dependencies:
       vite: 5.0.11
       vue: 3.4.14(typescript@5.3.3)
+    dev: true
+
+  /@vonagam/unocss-preset-flowbite@0.0.1(@unocss/core@0.58.3):
+    resolution: {integrity: sha512-hkGKmfG261xjkcwyy3bAKY9uZCIRd0XjTFQl223cvjF74AJPXkVPMYIl+ZviTh0Q035BR1EPeeQ7WoR+2vuNEg==}
+    peerDependencies:
+      '@unocss/core': '>= 0.55.0 0'
+    dependencies:
+      '@unocss/core': 0.58.3
+      mini-svg-data-uri: 1.4.4
     dev: true
 
   /@vue/compiler-core@3.4.14:
@@ -2416,6 +2447,13 @@ packages:
     resolution: {integrity: sha512-36yxDn5H7OFZQla0/jFJmbIKTdZAQHngCedGxiMmpNfEZM0sdEeT+WczLQrjK6D7o2aiyLYDnkw0R3JK0Qv1RQ==}
     dev: true
 
+  /flowbite@2.2.1:
+    resolution: {integrity: sha512-iiZyBTtriEDRHrqXZgpKHaxl4B2J8HZUP8Yn1RXozUDKszWHDVj4GxQqMMB9AJHRWOgXV/4E/LJZ/zqQgBUhWA==}
+    dependencies:
+      '@popperjs/core': 2.11.8
+      mini-svg-data-uri: 1.4.4
+    dev: false
+
   /fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
     dev: true
@@ -2848,6 +2886,10 @@ packages:
     resolution: {integrity: sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==}
     engines: {node: '>=4'}
     dev: true
+
+  /mini-svg-data-uri@1.4.4:
+    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
+    hasBin: true
 
   /minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
