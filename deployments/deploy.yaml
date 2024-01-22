@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  # 部署名字
+  name: bullet-resume
+  namespace: zhouhang
+spec:
+  replicas: 1
+  # 用来查找关联的 Pod，所有标签都匹配才行
+  selector:
+    matchLabels:
+      app: bullet-resume
+  # 定义 Pod 相关数据
+  template:
+    metadata:
+      labels:
+        app: bullet-resume
+    spec:
+      imagePullSecrets:
+        - name: txcloud-docker-registry  # 提前在项目下配置访问腾讯云的账号密码
+      # 定义容器，可以多个
+      containers:
+        - name: bullet-resume # 容器名字
+          # 如 ccr.ccs.tencentyun.com/corgi_project/ks-test:latest
+          image: $REGISTRY/$DOCKERHUB_NAMESPACE/$APP_NAME:SNAPSHOT-$BRANCH_NAME-$GIT_COMMIT # 配合 jenkins 使用的镜像
+          imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: zhouhang
+  labels:
+    app: bullet-resume-svc
+  name: bullet-resume-svc
+spec:
+  sessionAffinity: None
+  selector:
+    app: bullet-resume
+  ports:
+    - name: http-80
+      protocol: TCP
+      targetPort: 80
+      port: 80
+---
+kind: Ingress
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: bullet-resume
+  namespace: zhouhang
+  annotations:
+    kubesphere.io/creator: admin
+spec:
+  rules:
+    - host: resume.corgi.plus
+      http:
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: bullet-resume-svc
+                port:
+                  number: 80
