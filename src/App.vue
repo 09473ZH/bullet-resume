@@ -4,4 +4,3 @@ import Resume from './components/resume/index.vue'
 <template>
   <Resume />
 </template>
-6
