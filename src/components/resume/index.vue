@@ -1,6 +1,13 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
 import { initFlowbite } from 'flowbite'
+import {
+  GithubOutlined,
+  MailOutlined,
+  PhoneOutlined,
+  WechatOutlined,
+} from '@ant-design/icons-vue'
+
 import data from '@/config/data.json'
 import Item from '@/components/resume/Item.vue'
 
@@ -30,7 +37,11 @@ interface FormattedData {
 
 function formatDataList(dataList: ItemType[], options: Options = {}): FormattedData[] {
   return dataList.map((item: ItemType) => {
-    const { nameKey, briefKeys, descKey } = options
+    const {
+      nameKey,
+      briefKeys,
+      descKey,
+    } = options
 
     const name = nameKey ? item[nameKey] : undefined
     let brief: string[] = []
@@ -102,22 +113,24 @@ const eduList: FormattedData[] = formatDataList(data.eduList, {
           <div flex flex-col>
             <div v-if="tel" flex justify-end>
               <span>{{ tel }}</span>
-              <span i-carbon-phone font-size-5.5 pl-2 />
+              <PhoneOutlined font-size-5.5 pl-2 />
             </div>
 
             <div v-if="wechat" flex justify-end>
               <span>{{ wechat }}</span>
-              <span i-carbon-logo-wechat font-size-5.5 pl-2 />
+              <WechatOutlined font-size-5.5 pl-2 />
             </div>
 
             <div v-if="email" flex justify-end>
               <span>{{ email }}</span>
-              <span i-carbon-email font-size-5.5 pl-2 />
+              <MailOutlined font-size-5.5 pl-2 />
             </div>
 
             <div v-if="github" flex justify-end>
               <span>{{ github }}</span>
-              <a i-carbon-logo-github font-size-5.5 pl-2 :href="`https://github.com/${github}`" target="_blank" />
+              <a text-black :href="`https://github.com/${github}`" target="_blank">
+                <GithubOutlined font-size-5.5 pl-2 />
+              </a>
             </div>
           </div>
         </section>
@@ -141,10 +154,8 @@ const eduList: FormattedData[] = formatDataList(data.eduList, {
 
   #page {
     box-shadow: none;
-    margin: auto 2rem;
+    margin: 0;
     -webkit-print-color-adjust: exact;
-    -moz-print-color-adjust: exact;
-    -ms-print-color-adjust: exact;
     print-color-adjust: exact;
   }
 }

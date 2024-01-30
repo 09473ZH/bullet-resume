@@ -1,10 +1,10 @@
 {
   "info": {
-    "name": "周航",
+    "name": "王伟",
     "position": "前端开发工程师",
-    "location": "上海",
-    "gender": "女",
-    "age": "24 岁"
+    "location": "广州",
+    "gender": "男",
+    "age": "30 岁"
   },
   "items": {
     "skill": "个人技能",
@@ -15,92 +15,83 @@
   "skillList": [
     {
       "skillDesc": [
-        "熟练开发基于 React + Mobx + TypeScript 的应用",
-        "熟练使用 Vue3 + Vite 进行开发",
-        "熟悉 ES2015+ 特性，项目中熟练使用 async/await、decorator 等现代特性",
-        "有后端开发经验，可全栈独立完成小型 Web 项目",
-        "熟悉 Linux 环境的操作。对 Docker 等虚拟化工具有使用经验。熟悉 DevOps 工作流",
-        "熟练使用 Git 进行代码版本管理，熟悉常见的 Git 工作流"
+        "熟练掌握 Vue.js + Vuex 进行前端应用开发",
+        "熟练使用Webpack进行项目打包和优化",
+        "熟悉 ES6+ 特性，熟练运用Promise，箭头函数等新特性",
+        "具备后端开发经验，熟悉Java、Spring等框架，可独立开发小型Web项目",
+        "熟悉Linux环境操作，有Docker使用经验，了解CI/CD工作流程",
+        "熟练使用Git进行代码版本管理，熟悉常见的Git工作流程"
       ]
     }
   ],
   "eduList": [
     {
-      "university": "重庆邮电大学",
+      "university": "华南理工大学",
       "degree": "本科",
-      "major": "市场营销",
-      "eduDate": "2018.09 - 2022.12",
+      "major": "软件工程",
+      "eduDate": "2010.09 - 2014.06",
       "eduDesc": ""
     }
   ],
   "contact": {
-    "tel": "17623389616",
-    "wechat": "ZhouHang73",
-    "email": "alazhouhang@qq.com",
-    "github": "09473ZH"
+    "tel": "18887654321",
+    "wechat": "WangWeiDev",
+    "email": "wangwei@example.com",
+    "github": "wangweigithub"
   },
   "workList": [
     {
-      "company": "七牛信息技术有限公司",
-      "apartment": "前端开发与体验部",
-      "position": "实习&全职",
-      "workDate": "2021.07 - 2023.07",
+      "company": "广州某科技有限公司",
+      "apartment": "前端开发部",
+      "position": "全职",
+      "workDate": "2014.07 - 至今",
       "workDesc": [
-        "负责维护和开发 CDN 业务相关平台，包括 FUSION ADMIN、CDNBOSS 和 PORTAL FUSION；参与官网开发",
-        "参与以 Umi.js 为基础的 UI 组件库开发",
-        "与后端部门紧密合作，参与设计并完成了符合规范的接口对接；与设计和产品部门保持良好沟通，确保项目进展顺利",
-        "负责团队日常 Code Review",
-        "探索、分享新技术，并在项目中落地"
+        "负责公司多个核心 ToB/C 项目的前端架构设计和开发，带领团队完成项目进度规划和任务分配",
+        "指导团队成员解决技术难题，进行代码审查和性能优化，确保项目高质量交付",
+        "与产品经理、设计师密切合作，参与制定产品需求和功能规划，推动项目的顺利实施",
+        "组织团队内部技术分享和培训，提升团队整体技术水平和凝聚力"
       ]
     }
   ],
   "projectList": [
     {
-      "project": "FUSION-ADMIN 内部管理平台",
+      "project": "在线教育平台",
       "projectKeywords": [],
-      "projectBrief": "该项目旨在支持技术支持和运营人员处理 CDN 相关的业务，包括日志分析、域名管理和供应商管理等",
+      "projectBrief": "为搭建在线教育平台的前端架构和核心功能开发，包括课程管理、用户交互和内容展示等功能",
       "projectDesc": [
-        "历史久远，采用了 Angular、Vue2（旧版）、React（新版）进行开发",
-        "独立负责新版页面开发，使用 React16 + Mobx + TypeScript 进行函数式组件开发",
-        "对后端提供的复杂数据进行整合，确保符合前端数据需求；利用基于 Highcharts 的封装图表库进行数据可视化",
-        "使用 Angular + CoffeeScript 负责旧版 CRUD 功能开发；参与重构旧版页面，以提高代码可维护性和可读性"
+        "负责搭建在线教育平台的前端架构",
+        "领导团队完成核心功能的开发和优化，确保平台稳定运行",
+        "与后端团队紧密合作，设计接口规范并完成接口对接"
       ]
     },
     {
-      "project": "CDNBOSS 内部管理平台",
+      "project": "智能物流管理系统",
       "projectKeywords": [],
-      "projectBrief": "该项目主要帮助运维人员进行线路、节点以及包相关的管理；项目采用 Vue2 进行开发",
+      "projectBrief": "智能物流管理系统的项目进度管理、团队协调以及系统架构设计和模块开发",
       "projectDesc": [
-        "项目负责人；负责项目的开发、进度管理和跨部门协调沟通",
-        "设计并封装了多个自定义组件，提升了代码重用性",
-        "引入组合式 API 写法，对部分页面进行了重构；解决了老旧代码维护不足的历史遗留问题，并成功推广了新技术在团队中的应用。"
+        "担任智能物流管理系统项目经理",
+        "负责项目进度管理和跨部门协调沟通",
+        "领导团队完成系统架构设计和模块开发，确保项目按时交付并得到客户好评"
       ]
     },
     {
-      "project": "PORTAL-FUSION 控制台",
+      "project": "电商营销平台",
       "projectKeywords": [],
+      "projectBrief": "包括多个模块的实现和性能优化，以及与产品团队合作持续优化用户体验",
       "projectDesc": [
-        "使用 React17 + Mobx + TypeScript 开发",
-        "独立负责重构 告警配置和应用管理模块，并处理日常业务需求",
-        "参与 OEM 开发，处理定制化需求"
+        "参与电商营销平台的前端开发工作",
+        "负责多个模块的实现和性能优化",
+        "与产品团队紧密合作，根据用户反馈持续优化产品体验，提升用户留存率和转化率"
       ]
     },
     {
-      "project": "七牛官网",
+      "project": "企业内部协作平台",
       "projectKeywords": [],
+      "projectBrief": "企业内部协作平台的开发，包括项目进度管理、团队协调以及确保项目按时交付并得到内部各部门好评",
       "projectDesc": [
-        "使用 Next.js 开发",
-        "负责 Nav 的站内信改版、文档优化以及日常维护"
-      ]
-    },
-    {
-      "project": "v-code-diff",
-      "projectKeywords": [],
-      "projectBrief": "开源项目，GitHub stars 281",
-      "projectDesc": [
-        " vue 代码对比插件，vue2/3 通用，支持大文件对比、折叠展开、暗色模式等特性",
-        "项目的主要协作者，负责大部分组件新特性及其他内部需求开发",
-        "在线演示地址: https://shimada666.github.io/v-code-diff"
+        "领导团队开发企业内部协作平台",
+        "负责项目进度管理和团队协调",
+        "确保项目按时交付并得到内部各部门好评"
       ]
     }
   ]

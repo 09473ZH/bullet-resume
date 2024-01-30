@@ -26,7 +26,7 @@ const item = useVModels(props)
 
 <template>
   <div>
-    <div bg-gray-100 border-0 border-l-5 border-solid font-semibold p0.5 px-2 text-lg>
+    <div class="bg-[#eae0daff] border-0 border-l-5 border-solid font-semibold p0.5 px-2 text-lg">
       {{ item.title.value }}
     </div>
     <div py-2>
