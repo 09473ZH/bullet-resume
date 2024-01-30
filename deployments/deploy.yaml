@@ -17,7 +17,7 @@ spec:
         app: bullet-resume
     spec:
       imagePullSecrets:
-        - name: txcloud-docker-registry  # 提前在项目下配置访问腾讯云的账号密码
+        - name: txcloud-docker-registry # 提前在项目下配置访问腾讯云的账号密码
       # 定义容器，可以多个
       containers:
         - name: bullet-resume # 容器名字
