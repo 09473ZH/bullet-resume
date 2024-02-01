@@ -12,14 +12,7 @@ interface ItemInfoType {
   desc?: string[]
 }
 
-const props = withDefaults(defineProps<Props>(), {
-  title: '',
-  itemInfoList: () => [{
-    name: undefined,
-    brief: [],
-    desc: [],
-  }],
-})
+const props = defineProps<Props>()
 
 const item = useVModels(props)
 </script>

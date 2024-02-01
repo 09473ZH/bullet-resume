@@ -44,9 +44,8 @@ function formatDataList(dataList: ItemType[], options: Options = {}): FormattedD
     } = options
 
     const name = nameKey ? item[nameKey] : undefined
-    let brief: string[] = []
-    if (briefKeys)
-      brief = briefKeys.map((key: string) => item[key] || undefined)
+
+    const brief: string[] = (briefKeys || []).map((key: string) => item[key]).filter(Boolean)
 
     const desc = descKey ? item[descKey] : null
 
@@ -137,10 +136,10 @@ const eduList: FormattedData[] = formatDataList(data.eduList, {
       </header>
       <!--    content -->
       <section w-full text-left>
+        <Item :title="data.items.edu" :item-info-list="eduList" />
         <Item :title="data.items.skill" :item-info-list="skillList" />
         <Item :title="data.items.work" :item-info-list="workList" />
         <Item :title="data.items.project" :item-info-list="projectList" />
-        <Item :title="data.items.edu" :item-info-list="eduList" />
       </section>
     </div>
   </div>
