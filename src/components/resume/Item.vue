@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { useVModels } from '@vueuse/core'
-
+import {useVModels} from '@vueuse/core'
 interface Props {
   title: string
   itemInfoList: ItemInfoType[]
@@ -15,6 +14,15 @@ interface ItemInfoType {
 const props = defineProps<Props>()
 
 const item = useVModels(props)
+function renderText(text: string) {
+  const linkRegex = /\[([^\]]+)]\(([^)]+)\)/g
+  const keywordRegex = /<strong>(.*?)<\/strong>/g
+
+  let parsedText = text.replace(linkRegex, (_, content, url) => `<a href="${url}" target="_blank">${content}</a>`)
+  parsedText = parsedText.replace(keywordRegex, (_, content) => `<strong>${content}</strong>`)
+
+  return parsedText
+}
 </script>
 
 <template>
@@ -39,7 +47,7 @@ const item = useVModels(props)
         </div>
         <ul v-if="info && (info.desc || []).length !== 0" ps-3 pt-1 space-y-1 list-disc list-inside>
           <li v-for="(desc, descIndex) in info.desc" :key="descIndex">
-            {{ desc }}
+            <span v-html="renderText(desc)" />
           </li>
         </ul>
       </div>
