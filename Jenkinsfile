@@ -60,7 +60,7 @@ pipeline {
   // 一般改这里就够了
   environment {
     // 最好用 ssh 协议，https 协议的仓库容易拉不下来
-    REPO = 'https://hub.fgit.cf/09473ZH/bullet-resume.git'
+    REPO = 'git@e.coding.net:g-duya0458/zhouhang/bullet-resume.git'
     // ssh 协议拉代码一定要配私钥
     GIT_CREDENTIAL_ID = 'zh-github-ssh'
     KUBECONFIG_CREDENTIAL_ID = 'kubeconfig'
