@@ -158,4 +158,5 @@ const eduList: FormattedData[] = formatDataList(data.eduList, {
     print-color-adjust: exact;
   }
 }
+
 </style>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import {useVModels} from '@vueuse/core'
+import { useVModels } from '@vueuse/core'
+
 interface Props {
   title: string
   itemInfoList: ItemInfoType[]
@@ -42,7 +43,7 @@ function renderText(text: string) {
             flex-1
             :class="{ 'flex-grow-2': briefIndex === 2 && info.brief!.length === 3, 'text-right': briefIndex === info.brief!.length - 1 && info.brief!.length !== 1 }"
           >
-            {{ brief }}
+             <span v-html="renderText(brief)" />
           </span>
         </div>
         <ul v-if="info && (info.desc || []).length !== 0" ps-3 pt-1 space-y-1 list-disc list-inside>
@@ -63,5 +64,30 @@ ul {
 
 li {
   padding: 0;
+}
+
+a {
+  color: #18272F;
+  position: relative;
+  text-decoration: none;
+}
+
+a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #1f2f36;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
 }
 </style>
