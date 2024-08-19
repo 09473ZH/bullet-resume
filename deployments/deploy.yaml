@@ -21,8 +21,7 @@ spec:
       # 定义容器，可以多个
       containers:
         - name: bullet-resume # 容器名字
-          # 如 ccr.ccs.tencentyun.com/corgi_project/ks-test:latest
-          image: $REGISTRY/$DOCKERHUB_NAMESPACE/$APP_NAME:SNAPSHOT-$BRANCH_NAME-$GIT_COMMIT # 配合 jenkins 使用的镜像
+          image: ${IMAGE}
           imagePullPolicy: Always
 ---
 apiVersion: v1
