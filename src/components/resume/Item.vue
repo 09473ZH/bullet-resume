@@ -31,7 +31,7 @@ function renderText(text: string) {
     <div class="bg-[#eae0daff] border-0 border-l-5 border-solid font-semibold p0.5 px-2 text-lg">
       {{ item.title.value }}
     </div>
-    <div py-2>
+    <div space-y-3>
       <div v-for="(info, index) in item.itemInfoList.value" :key="index" class="[&:last-child]:pb-1">
         <div v-if="info?.name !== undefined" font-medium text-gray-900 pt-1>
           {{ info.name }}

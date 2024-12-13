@@ -4,7 +4,7 @@
     "position": "前端开发工程师",
     "location": "上海",
     "gender": "女",
-    "age": "24 岁"
+    "age": "25 岁"
   },
   "items": {
     "skill": "个人技能",
@@ -15,11 +15,9 @@
   "skillList": [
     {
       "skillDesc": [
-        "熟练开发基于 React + Mobx + TypeScript 的应用",
-        "熟练使用 Vue3 + Vite 进行开发",
-        "熟悉 JavaScript 函数式编程 ，项目中熟练使用 ES6+ 特性",
-        "熟悉 Linux 环境基本操作；对 Docker 等虚拟化工具有使用经验；熟悉 DevOps 工作流",
-        "有后端开发经验，可全栈独立完成小型 Web 项目"
+        "熟悉 React、Vue、TypeScript。熟悉 JavaScript 函数式编程，项目中熟练使用 ES6+ 特性。熟悉 Vite、TailwindCSS 等现代化工具",
+        "熟悉 Linux 系统，Docker 容器等虚拟化工具，能够搭建 DevOps 工作流",
+        "对业界新技术敏感，并抱有热情，热爱 AI 技术。工作中熟练使用 Cursor 等 AI 工具提升工作效率"
       ]
     }
   ],
@@ -55,7 +53,29 @@
   ],
   "projectList": [
     {
-      "project": "CDNBOSS 内部管理平台",
+      "project": "CCOPS（个人项目）",
+      "projectBrief": "服务器运维管理平台，负责管理用户在公有云和私有云上的服务器。主要包括主机查询模块（主机列表与详情展示）、与主机变更模块（跳板机、配置管理、配置批量下发功能）",
+      "projectDesc": [
+        "平台整体基于<strong> React 18 + React Query + TypeScript + TailwindCSS </strong>开发",
+        "拥有良好的视觉设计，交互体验流畅，支持夜间模式，支持 I18N",
+        "主机列表展示大量主机基础数据，支持分页、搜索、筛选，支持动态设置表格字段。详情支持查看主机详细信息，包括主机硬件、磁盘、用户、公钥等情况",
+        "支持跳板机连接终端，使用 Xterm.js + WebSocket 实现，支持多终端连接、夜间模式，交互体验胜于同类开源项目 Jumpserver",
+        "基于 Ansible 支持快速对批量主机下发快捷命令或软件，基于 WebSocket 实时展示任务结果。软件有版本控制功能，并接入 LLM，支持 AI 自动生成软件具体 YAML",
+        "[测试环境地址：http://8.141.5.30/host_manage](http://8.141.5.30/host_manage)"
+      ]
+    },
+    {
+      "project": "重庆邮电大学开源镜像站（个人项目）",
+      "projectBrief": "高校的镜像站点前端，支持 Pypi、Ubuntu、RedHat 等多种镜像源",
+      "projectDesc": [
+        "使用 <strong>Vue3 + Vite + TypeScript + UnoCss </strong>开发",
+        "拥有良好的视觉设计，交互体验流畅，动态效果出色，适配移动端，支持夜间模式",
+        "功能上支持软件包搜索，支持软件包版本对比，有清晰的镜像信息展示",
+        "[在线演示地址：https://mirrors.cqupt.edu.cn](https://mirrors.cqupt.edu.cn)"
+      ]
+    },
+    {
+      "project": "CDNBOSS 内部管理平台（公司项目）",
       "projectKeywords": [],
       "projectBrief": "该项目主要帮助运维人员进行线路、节点以及包相关的管理；项目采用 <strong>Vue2</strong> 进行开发",
       "projectDesc": [
@@ -65,7 +85,7 @@
       ]
     },
     {
-      "project": "FUSION ADMIN 内部管理平台",
+      "project": "FUSION ADMIN 内部管理平台（公司项目）",
       "projectKeywords": [],
       "projectBrief": "该项目旨在支持技术支持和运营人员处理 CDN 相关的业务，包括日志分析、域名管理和供应商管理等",
       "projectDesc": [
@@ -76,7 +96,7 @@
       ]
     },
     {
-      "project": "PORTAL FUSION 控制台",
+      "project": "PORTAL FUSION 控制台（公司项目）",
       "projectKeywords": [],
       "projectBrief": "该项目主要为开发者提供 CDN 的域名管理、告警配置和日志分析等服务",
       "projectDesc": [
@@ -87,7 +107,7 @@
       ]
     },
     {
-      "project": "七牛官网",
+      "project": "七牛官网（公司项目）",
       "projectKeywords": [],
       "projectDesc": [
         "使用<strong> Next.js </strong>开发",
@@ -95,14 +115,14 @@
       ]
     },
     {
-      "project": "v-code-diff",
+      "project": "v-code-diff（个人项目）",
       "projectKeywords": [],
-      "projectBrief": "开源项目，GitHub stars 313",
+      "projectBrief": "开源项目，GitHub stars 411",
       "projectDesc": [
         "一个 Vue 代码对比插件，Vue2/3 通用，支持大文件对比、折叠展开、暗色模式等特性",
         "项目的主要协作者，负责 issue 处理，支持新特性以及性能优化（tree-shaking）",
         "demo 页的维护者，支持了页面优化、i18n",
-        "[在线演示地址](https://shimada666.github.io/v-code-diff): https://shimada666.github.io/v-code-diff"
+        "[在线演示地址：https://shimada666.github.io/v-code-diff](https://shimada666.github.io/v-code-diff)"
       ]
     }
   ]
