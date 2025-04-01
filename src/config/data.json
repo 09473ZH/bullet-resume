@@ -4,7 +4,8 @@
     "position": "前端开发工程师",
     "location": "上海",
     "gender": "女",
-    "age": "25 岁"
+    "age": "25 岁",
+    "status": "求职中（随时到岗）"
   },
   "items": {
     "skill": "个人技能",
@@ -15,9 +16,10 @@
   "skillList": [
     {
       "skillDesc": [
-        "熟悉 React、Vue、TypeScript。熟悉 JavaScript 函数式编程，项目中熟练使用 ES6+ 特性。熟悉 Vite、TailwindCSS 等现代化工具",
-        "熟悉 Linux 系统，Docker 容器等虚拟化工具，能够搭建 DevOps 工作流",
-        "对业界新技术敏感，并抱有热情，热爱 AI 技术。工作中熟练使用 Cursor 等 AI 工具提升工作效率"
+        "熟悉 <strong>React</strong> 及其生态体系（<strong>React Query/Zustand/Mobx</strong> 等）， 熟练使用<strong>Vue 2/3</strong>",
+        "项目中熟练使用 <strong>TypeScript</strong> 以及 <strong>ES6+</strong> 特性。熟悉 <strong>Vite</strong>、<strong>TailwindCSS</strong> 等现代化工具",
+        "熟悉 <strong>Docker</strong> 容器等虚拟化工具，能够搭建 DevOps 工作流",
+        "有技术热情，参与开源项目，愿意学习新技术。热爱 AI 技术，工作中熟练使用 Cursor 等 AI 工具提升工作效率"
       ]
     }
   ],
@@ -26,8 +28,7 @@
       "university": "重庆邮电大学",
       "degree": "本科",
       "major": "市场营销",
-      "eduDate": "2018 - 2022",
-      "eduDesc": ""
+      "eduDate": "2018 - 2022"
     }
   ],
   "contact": {
@@ -40,59 +41,56 @@
     {
       "company": "七牛信息技术有限公司",
       "apartment": "前端开发与体验部",
-      "position": "实习&全职",
+      "position": "实习 → 全职",
       "workDate": "2021.07 - 2023.07",
       "workDesc": [
-        "负责维护和开发 CDN 业务相关平台；参与官网开发",
-        "参与以 Umi.js 为基础的 UI 组件库开发",
-        "与后端团队紧密合作，参与设计并完成了符合规范的接口对接；在与设计和产品部门的协作中，保持良好沟通，确保项目进展顺利",
-        "负责团队日常 Code Review",
+        "负责 CDN 业务核心系统开发，独立负责中型项目，同时参与官网、内部组件库开发",
+        "负责 Vue → React 技术栈迁移，推进 Vue 2 项目使用 Composition API，并在团队内推广",
+        "与后端团队紧密合作，参与设计并完成规范的接口对接；与设计和产品部门保持良好沟通，确保项目顺利进展",
+        "负责团队日常 Code Review，帮助实习生提升代码质量",
         "探索、分享新技术，并在项目中落地"
+      ]
+    },
+    {
+      "company": "个人开发者",
+      "position": " ",
+      "workDate": "2023.08 - 至今",
+      "workDesc": [
+        "维护 v-code-diff 开源项目（GitHub Stars 433）",
+        "从 0 到 1 开发 CCOPS 项目"
       ]
     }
   ],
   "projectList": [
     {
-      "project": "CCOPS（个人项目）",
-      "projectBrief": "服务器运维管理平台，负责管理用户在公有云和私有云上的服务器。主要包括主机查询模块（主机列表与详情展示）、与主机变更模块（跳板机、配置管理、配置批量下发功能）",
+      "project": "CCOPS 运维平台（个人项目）",
+      "projectBrief": "CCOPS 是一款面向小型企业的轻量级主机运维平台，专注于解决中小企业在日常运维中的核心痛点。通过支持数十到上百台规模的服务器集群管理，提供高效、稳定、易用的运维解决方案。",
       "projectDesc": [
-        "平台整体基于<strong> React 18 + React Query + TypeScript + TailwindCSS </strong>开发",
-        "拥有良好的视觉设计，交互体验流畅，支持夜间模式，支持 I18N",
-        "主机列表展示大量主机基础数据，支持分页、搜索、筛选，支持动态设置表格字段。详情支持查看主机详细信息，包括主机硬件、磁盘、用户、公钥等情况",
-        "支持跳板机连接终端，使用 Xterm.js + WebSocket 实现，支持多终端连接、夜间模式，交互体验胜于同类开源项目 Jumpserver",
-        "基于 Ansible 支持快速对批量主机下发快捷命令或软件，基于 WebSocket 实时展示任务结果。软件有版本控制功能，并接入 LLM，支持 AI 自动生成软件具体 YAML",
-        "[测试环境地址：http://8.141.5.30/host_manage](http://8.141.5.30/host_manage)"
+        "技术栈：<strong>React 18 + TypeScript + React Query + Vite</strong>",
+        "接入 Sentry 实现异常监控，使用 <strong>Ant Design + Tailwind CSS</strong> 实现现代化 UI 设计",
+        "使用 <strong>Xterm.js + WebSocket</strong> 实现浏览器终端，支持多会话并行操作",
+        "基于 RBAC 设计前端权限管理系统，实现多用户/多角色访问控制；实现动态主题切换和多语言支持方案",
+        "统一 Web 界面管理数百台主机（标签化分类/自动信息采集），密钥集中管理",
+        "实现高效批量运维， Ansible 集成 + AI 辅助生成配置",
+        "[在线演示地址：https://ccops-demo.corgi.plus](https://ccops-demo.corgi.plus), [GitHub 地址：https://github.com/09473ZH/ccops](https://github.com/09473ZH/ccops)"
       ]
     },
     {
       "project": "重庆邮电大学开源镜像站（个人项目）",
       "projectBrief": "高校的镜像站点前端，支持 Pypi、Ubuntu、RedHat 等多种镜像源",
       "projectDesc": [
-        "使用 <strong>Vue3 + Vite + TypeScript + UnoCss </strong>开发",
+        "使用 <strong>Vue3 + Vite + TypeScript + UnoCSS </strong>开发",
         "拥有良好的视觉设计，交互体验流畅，动态效果出色，适配移动端，支持夜间模式",
         "功能上支持软件包搜索，支持软件包版本对比，有清晰的镜像信息展示",
         "[在线演示地址：https://mirrors.cqupt.edu.cn](https://mirrors.cqupt.edu.cn)"
       ]
     },
     {
-      "project": "CDNBOSS 内部管理平台（公司项目）",
-      "projectKeywords": [],
-      "projectBrief": "该项目主要帮助运维人员进行线路、节点以及包相关的管理；项目采用 <strong>Vue2</strong> 进行开发",
+      "project": "FUSION ADMIN 系统（公司项目）",
+      "projectBrief": "公司内部运营人员、技术支持的管理系统",
       "projectDesc": [
-        "项目负责人；负责项目的日常开发、进度管理和跨部门协调沟通",
-        "设计封装多个自定义组件，简化页面通信，提高代码重用性",
-        "引入组合式 API 写法，对部分页面进行了重构，解决了老旧代码维护不足的历史遗留问题，并成功推广了新技术在团队中的应用"
-      ]
-    },
-    {
-      "project": "FUSION ADMIN 内部管理平台（公司项目）",
-      "projectKeywords": [],
-      "projectBrief": "该项目旨在支持技术支持和运营人员处理 CDN 相关的业务，包括日志分析、域名管理和供应商管理等",
-      "projectDesc": [
-        "采用了 <strong>Angular + Vue2（旧版）、React（新版）</strong>进行开发",
-        "独立负责新版页面开发，使用 React16 + Mobx + TypeScript 进行函数式组件开发",
-        "使用 Promise 进行接口批量请求，并对后端提供的复杂数据进行整合，确保符合前端数据需求；利用基于<strong> Highcharts </strong>的封装图表库进行数据可视化",
-        "使用 Angular + CoffeeScript 负责旧版 CRUD 功能开发；参与重构旧版页面，统一技术栈，以提高代码可维护性和可读性"
+        "负责 React 技术栈迁移：从 Angular/Vue 统一到 React，新版使用 <strong>React 16 + MobX + TypeScript</strong> 进行函数式组件开发。同时参与旧版 Angular 项目维护",
+        "使用 Promise 进行接口批量请求，并对后端提供的复杂数据进行整合，确保符合前端数据需求；使用基于 <strong>Highcharts</strong> 封装的组件库绘制多个业务图表实现数据可视化"
       ]
     },
     {
@@ -100,28 +98,31 @@
       "projectKeywords": [],
       "projectBrief": "该项目主要为开发者提供 CDN 的域名管理、告警配置和日志分析等服务",
       "projectDesc": [
-        "使用<strong> React17 + Mobx + TypeScript </strong>开发",
-        "独立负责重构告警配置，将卡片式列表改为功能性表格，实现批量删除、监控指标配置等功能",
-        "独立负责开发应用管理模块，处理域名配置等日常开发需求",
+        "技术栈：<strong>React 17 + MobX + TypeScript</strong>",
+        "重构告警配置，将卡片式列表改为功能性表格，实现批量删除、监控指标配置等功能",
+        "开发应用管理模块，处理域名配置等日常开发需求",
+        "完成站内信改版",
         "参与 OEM 开发，处理定制化需求"
       ]
     },
     {
-      "project": "七牛官网（公司项目）",
+      "project": "CDNBOSS 内部管理平台（公司项目）",
       "projectKeywords": [],
+      "projectBrief": "该项目主要帮助运维人员进行线路、节点以及包相关的管理；项目采用 <strong>Vue 2</strong> 进行开发",
       "projectDesc": [
-        "使用<strong> Next.js </strong>开发",
-        "负责 Nav 的站内信改版、文档优化以及日常维护"
+        "项目负责人：负责项目的日常开发、进度管理和跨部门协调沟通",
+        "设计封装多个自定义组件，简化页面通信，提高代码重用性",
+        "引入 Composition API 写法，对部分页面进行重构，解决老旧代码维护不足的历史遗留问题，并成功推广新技术在团队中的应用"
       ]
     },
     {
       "project": "v-code-diff（个人项目）",
       "projectKeywords": [],
-      "projectBrief": "开源项目，GitHub stars 411",
+      "projectBrief": "开源项目，GitHub Stars 433，月下载量 30K+",
       "projectDesc": [
-        "一个 Vue 代码对比插件，Vue2/3 通用，支持大文件对比、折叠展开、暗色模式等特性",
-        "项目的主要协作者，负责 issue 处理，支持新特性以及性能优化（tree-shaking）",
-        "demo 页的维护者，支持了页面优化、i18n",
+        "一个 Vue 代码对比插件，<strong>Vue 2/3 通用</strong>，支持大文件对比、折叠展开、暗色模式等特性",
+        "项目的主要协作者，负责 Issue 处理，支持新特性以及性能优化（Tree-shaking）",
+        "从 0-1 开发设计 Demo 页，支持 i18n",
         "[在线演示地址：https://shimada666.github.io/v-code-diff](https://shimada666.github.io/v-code-diff)"
       ]
     }
